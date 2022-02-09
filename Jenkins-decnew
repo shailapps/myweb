@@ -18,7 +18,7 @@ pipeline{
         }
         stage("deploy-dev"){
             steps{
-                sshagent(['tomcat-new']) {
+                sshagent(['tomcat-server1']) {
                 sh """
                     scp -o StrictHostKeyChecking=no target/myweb.war  root@172.31.83.18:/usr/share/tomcat/webapps/
                     

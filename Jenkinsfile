@@ -26,7 +26,7 @@ try{
 }
 
 }catch(error){
-  slackSend channel: '#devops-2',
+  slackSend channel: '#build',
 				  color: 'danger',
 				  message: "Job -  ${env.JOB_NAME}, Failed, Build URL is ${env.BUILD_URL}"
    error 'Something wrong'
